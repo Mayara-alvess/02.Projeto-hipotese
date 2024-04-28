@@ -315,6 +315,7 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%203.png)
     
     <aside>
+        
     ❗ A média está consideravelmente distante da mediana, é um sinal de que os dados podem conter valores extremos, ou seja, outliers.
     
     </aside>
@@ -351,6 +352,7 @@ Através do histrograma criado em python podemos ver a distrubuição das variav
 
 
 **8.Calcular quartis, decis ou percentis**
+
 
 Query para calcular os quartis para as variáveis dos atributos musicais e para as streams, categorizando-os posteriormente.
 
@@ -451,12 +453,14 @@ ON a.streams_clean = Quartiles.streams_clean;
 ```
 
 <aside>
+    
 ❗ Criamos os quartis, para compreender a distribuição dos dados e aplicamos categorias,essas categorias serão essenciais para uma análise mais aprofundada posteriormente.
 
 </aside>
 
 
-1. **Calcular correlação entre variáveis** 
+1. **Calcular correlação entre variáveis**
+   
 
 No código abaixo calculamos a correlação da soma das playlists e de stream.
 
@@ -468,6 +472,7 @@ FROM `projeto-hipotese.tratados.tabelas_unificadas`;
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%208.png)
 
 <aside>
+    
 ❗ Na análise da correlação entre streams e playlists, observamos uma associação, indicando uma relação significativa entre essas duas variáveis. Por outro lado, ao examinarmos a correlação com a de streams e danceability, notamos uma associação mais fraca, sugerindo uma ligação menos marcante entre as variaveis.
 
 </aside>
@@ -478,6 +483,7 @@ FROM `projeto-hipotese.tratados.tabelas_unificadas`;
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%209.png)
 
 <aside>
+    
 ❗ Aplicamos a segmentação efetuada com os quartis nas categorias musicais
 
 </aside>
@@ -493,6 +499,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2010.png)
 
 <aside>
+    
 ❗ A hipótese foi anulada após a análise do gráfico de dispersão, que revelou a ausência de correlação direta entre o número de streams e o BPM (Batidas por minuto). Os dados sugerem que outros fatores podem influenciar o número de streams, enquanto o BPM não parece desempenhar um papel significativo neste contexto.
 
 </aside>
@@ -503,6 +510,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2011.png)
 
 <aside>
+    
 ❗ Não necessariamente, as músicas top 1 no Spotify possuem um ranking bem variável na Apple sendo a maioria abaixo do top 20, já no Deezer vemos que a maioria possui ranking 0 (pode ser um erro ou 0 representa 1).
 
 </aside>
@@ -513,16 +521,18 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2012.png)
 
 <aside>
+    
 ❗ A hipótese está correta. Conforme o gráfico acima, podemos verificar que quanto maior o número de playlists maior o número de streams. A linha de tendência central indica exatamente esse comportamento.
 
 </aside>
 
 > *Artistas com um maior número de músicas no Spotify têm mais streams.*
-> 
+
 
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2013.png)
 
 <aside>
+    
 ❗ Correto. Ao analisar os dados, verificamos que os artistas com maiores número de música possuem um maior número de stream.
 
 </aside>
@@ -535,9 +545,10 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2015.png)
 
 > *As características da música influenciam o sucesso em termos de número de streams no Spotify.*
-> 
+
 
 <aside>
+    
 ❗ As características tem uma correlação, tanto positiva ou para negativa, porém não necessariamente significa que seguindo as características musicais alcançará o sucesso já que depende também de fatores externos.
 
 </aside>
