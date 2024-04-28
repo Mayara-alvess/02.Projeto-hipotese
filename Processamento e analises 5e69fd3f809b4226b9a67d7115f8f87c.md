@@ -115,7 +115,7 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     
     </aside>
     
-    ![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled.png)
+    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%201.png)
     
     ![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%201.png)
     
