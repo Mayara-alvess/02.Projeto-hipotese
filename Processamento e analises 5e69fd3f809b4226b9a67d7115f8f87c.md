@@ -115,9 +115,9 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     
     </aside>
     
-    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%201.png)
+    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled.png)
     
-    ![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%201.png)
+    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%201.png)
     
     Músicas excluídas da tabela *track_in_spotify.*
     
@@ -144,7 +144,7 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     
     Depois de utlizar a formula encontramos 2 linhas em branco, optamos por deixar devido a somente o track_name_clean estar em branco.
     
-    ![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%202.png)
+    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%202.png)
     
     **Verificar e alterar o tipo de dados**
     
@@ -305,13 +305,14 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     
 
 > Agora no Power BI, começamos a aplicar tabelas e gráficos para a visualização dos dados.
-> 
+>
+
 
 1.  **Aplicar medidas de tendência central**
     
      Aplicamos medidas como média, mediana para variável streams e soma_playlist.
     
-    ![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%203.png)
+    ![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%203.png)
     
     <aside>
     ❗ A média está consideravelmente distante da mediana, é um sinal de que os dados podem conter valores extremos, ou seja, outliers.
@@ -319,31 +320,35 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     </aside>
     
 
+
 **Ver distribuição**
 
 Através do histrograma criado em python podemos ver a distrubuição das variaveis abaixo
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%204.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%204.png)
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%205.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%205.png)
+
 
 **7.Aplicar medidas de dispersão** 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%206.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%206.png)
 
 <aside>
 ❗ O desvio padrão nas duas variáveis aponta para uma dispersão significativa em relação à mediana, indicando uma ampla diversidade nos dados da amostra. Isso sugere que os valores individuais estão consideravelmente distantes da mediana, o que reflete uma considerável variabilidade e uma ampla gama de valores na amostra.
 
 </aside>
 
+
 **Visualizar dados ao longo do tempo**
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%207.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%207.png)
 
 <aside>
 ❗ No gráfico acima conseguimos visualizar como as plataformas de streams se comportaram ao longo do tempo e como o ano de lançamento da música afeta a visibilidade que a plataforma tem.
 
 </aside>
+
 
 **8.Calcular quartis, decis ou percentis**
 
@@ -450,6 +455,7 @@ ON a.streams_clean = Quartiles.streams_clean;
 
 </aside>
 
+
 1. **Calcular correlação entre variáveis** 
 
 No código abaixo calculamos a correlação da soma das playlists e de stream.
@@ -459,21 +465,23 @@ SELECT CORR(streams_clean, soma_playlist) AS correlacao_playlist, CORR (streams_
 FROM `projeto-hipotese.tratados.tabelas_unificadas`;
 ```
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%208.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%208.png)
 
 <aside>
 ❗ Na análise da correlação entre streams e playlists, observamos uma associação, indicando uma relação significativa entre essas duas variáveis. Por outro lado, ao examinarmos a correlação com a de streams e danceability, notamos uma associação mais fraca, sugerindo uma ligação menos marcante entre as variaveis.
 
 </aside>
 
+
 **10.Aplicar segmentação**
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%209.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%209.png)
 
 <aside>
 ❗ Aplicamos a segmentação efetuada com os quartis nas categorias musicais
 
 </aside>
+
 
 1. **Validar hipótese**
 
@@ -482,7 +490,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 > *Músicas com BPM (Batidas Por Minuto) mais altos fazem mais sucesso em termos de número de streams no Spotify.*
 > 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2010.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2010.png)
 
 <aside>
 ❗ A hipótese foi anulada após a análise do gráfico de dispersão, que revelou a ausência de correlação direta entre o número de streams e o BPM (Batidas por minuto). Os dados sugerem que outros fatores podem influenciar o número de streams, enquanto o BPM não parece desempenhar um papel significativo neste contexto.
@@ -492,7 +500,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 > *As músicas mais populares no ranking do Spotify também possuem um comportamento semelhante em outras plataformas, como a Deezer.*
 > 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2011.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2011.png)
 
 <aside>
 ❗ Não necessariamente, as músicas top 1 no Spotify possuem um ranking bem variável na Apple sendo a maioria abaixo do top 20, já no Deezer vemos que a maioria possui ranking 0 (pode ser um erro ou 0 representa 1).
@@ -502,7 +510,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 > *A presença de uma música em um maior número de playlists está correlacionada com um maior número de streams.*
 > 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2012.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2012.png)
 
 <aside>
 ❗ A hipótese está correta. Conforme o gráfico acima, podemos verificar que quanto maior o número de playlists maior o número de streams. A linha de tendência central indica exatamente esse comportamento.
@@ -512,7 +520,7 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 > *Artistas com um maior número de músicas no Spotify têm mais streams.*
 > 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2013.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2013.png)
 
 <aside>
 ❗ Correto. Ao analisar os dados, verificamos que os artistas com maiores número de música possuem um maior número de stream.
@@ -522,9 +530,9 @@ Abaixo apresentaremos as hipóteses e as análises feitas para validar ou revoga
 > *As características da música influenciam o sucesso em termos de número de streams no Spotify.*
 > 
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2014.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2014.png)
 
-![Untitled](Processamento%20e%20analises%205e69fd3f809b4226b9a67d7115f8f87c/Untitled%2015.png)
+![Untitled](https://github.com/Mayara-alvess/Projeto-hipotese/blob/master/Untitled%2015.png)
 
 > *As características da música influenciam o sucesso em termos de número de streams no Spotify.*
 > 
