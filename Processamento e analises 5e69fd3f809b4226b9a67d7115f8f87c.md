@@ -104,9 +104,10 @@ Neste banco de dados temos 3 tabelas: Competition, Spotify e Technical.
     Na tabela *track_in_spotify* encontramos 4 valores duplicados.
     
     ```sql
-    SELECT COUNT(*)
+    SELECT track_name, artist_s__name, released_year
+     COUNT(*) AS Conte, max(track_id)id1, min(track_id) AS id2
     FROM `projeto-hipotese.origem.track_in_spotify` 
-    GROUP BY track_id
+    GROUP BY track_name,artist_s__name, released_year
     HAVING COUNT(*) >1;
     ```
     
